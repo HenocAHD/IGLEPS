@@ -1,0 +1,93 @@
+---
+import CardSermonMin from "./CardSermonMin.astro";
+const post = await Astro.glob("../pages/sermones/*.md");
+const postSort = post.sort((a, b) => b.frontmatter.date - a.frontmatter.date).slice(0,2);
+---
+
+<footer class="w-full h-auto pb-4 bg-gray-900">
+  <section
+    class="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-between h-auto p-10 lg:p-20"
+  >
+    <section class="flex flex-col gap-8 w-full lg:w-80">
+      <h2 class="text-xl font-bold text-rose-600">IGLEPS</h2>
+      <p class="text-white">
+        La Iglesia Evangélica Pentecostés "El Buen Samaritano" es una
+        organización cristiana,compuestapor personas regeneradas por la gracia
+        de jesucristo,sujetas y dóciles a la dirección del espíritu santo,la
+        instrucción de la palabra de Dios y la guía espiritualy administrativa
+        de sus autoridades eclesiales.
+      </p>
+      <div class="flex flex-row gap-4">
+        <a
+          href="#"
+          class="w-12 h-12 text-white hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
+        >
+          <i class="fa-brands fa-facebook-f fa-xl"></i>
+        </a>
+        <a
+          href="#"
+          class="w-12 h-12 text-white hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
+        >
+          <i class="fa-brands fa-instagram fa-xl"></i>
+        </a>
+        <a
+          href="#"
+          class="w-12 h-12 text-white hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
+        >
+          <i class="fa-brands fa-twitter fa-xl"></i>
+        </a>
+        <a
+          href="#"
+          class="w-12 h-12 text-white hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
+        >
+          <i class="fa-brands fa-youtube fa-xl"></i>
+        </a>
+      </div>
+    </section>
+    <section class="flex flex-col gap-8">
+      <h2 class="text-xl font-bold text-rose-600">Ultimos Sermones</h2>
+      {
+        postSort.map((post) => (
+          <a href={post.url}>
+            <CardSermonMin
+              img={post.frontmatter.img}
+              title={post.frontmatter.title}
+              date={post.frontmatter.date}
+            />
+          </a>
+        ))
+      }
+    </section>
+    <section class="flex flex-col gap-8">
+      <h2 class="text-xl font-bold text-rose-600">Enlaces</h2>
+      <ul>
+        <li class="py-4 lg:pr-8 border-b border-gray-600">
+          <a href="" class="text-white">Inicio</a>
+        </li>
+        <li class="py-4 lg:pr-8 border-b border-gray-600">
+          <a href="" class="text-white">Ministerio</a>
+        </li>
+        <li class="py-4 lg:pr-8 border-b border-gray-600">
+          <a href="" class="text-white">Sermones</a>
+        </li>
+        <li class="py-4 lg:pr-8 border-b border-gray-600">
+          <a href="" class="text-white">Contáctanos</a>
+        </li>
+      </ul>
+    </section>
+    <section class="flex flex-col gap-8">
+      <h2 class="text-xl font-bold text-rose-600">¿Tienes preguntas?</h2>
+      <article class="text-white">
+        <i class="fa-solid fa-phone"></i>
+        <p>+50489257992</p>
+      </article>
+      <article class="text-white">
+        <i class="fa-solid fa-envelope"></i>
+        <p>igleps@gmail.com</p>
+      </article>
+    </section>
+  </section>
+  <p class="text-center text-gray-600">
+    Derechos Reservados 2023 - Desarrollado por Henoc Hernandez
+  </p>
+</footer>

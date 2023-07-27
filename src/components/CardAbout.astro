@@ -8,8 +8,8 @@ interface Props {
 const { icon, title, text } = Astro.props;
 ---
 
-<section class="flex flex-col gap-4 w-full lg:w-80 lg:p4 p-8">
+<section class="flex flex-col gap-4 w-full lg:p4 p-8">
   <i class:list={[icon, 'text-center', 'text-rose-600']}></i>
   <h2 class="font-bold pt-2 text-center">{title}</h2>
-  <p class="text-justify">{text}</p>
+  <p class="text-justify leading-8">{text}</p>
 </section>
