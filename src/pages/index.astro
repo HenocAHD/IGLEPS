@@ -1,15 +1,84 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CardAbout from "../components/CardAbout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="IGLEPS">
+  <section
+    class="flex flex-col gap-8 items-center justify-center w-screen h-screen bg-gray-600 bg-blend-darken bg-cover bg-center"
+    style="background-image: url(../../public/imgs/bg_2.png);"
+  >
+    <h1 class="flex flex-col items-center font-bold gap-8">
+      <span
+        class="text-rose-600 text-base md:text-xl lg:text-2xl text-center tracking-[.4em] uppercase"
+        >Bienvenidos a</span
+      >
+      <span
+        class="text-white leading-8 text-base md:text-2xl lg:text-4xl text-center tracking-[.4em] uppercase"
+        >Iglesia Evangélica Pentecostés</span
+      >
+      <span
+        class="text-white text-base md:text-2xl lg:text-4xl text-center tracking-[.4em] uppercase"
+        >"El Buen Samaritano"</span
+      >
+      <span
+        class="text-white text-base md:text-2xl lg:text-4xl text-center tracking-[.4em] uppercase"
+        >IGLEPS</span
+      >
+    </h1>
+    <p class="text-white text-xs md:text-base lg:text-xl text-center">
+      Aquí usted, se sentira amado y ayudado.
+    </p>
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section
+    class="max-w-screen-xl flex flex-col lg:flex-row justify-between items-center gap-8 lg:h-[40vh] mx-auto p-4"
+  >
+    <CardAbout
+      icon="fa-solid fa-book-bible fa-2xl"
+      title="Modelo Bíblico"
+      text="El modelo bíblico de trabajo de IGLEPS es la persona de Jesucristo y, toma como base bíblica para quehacer eclesial y pastoral, el texto de San Lucas 10: 25-37."
+    />
+    <CardAbout
+      icon="fa-solid fa-bullseye fa-2xl"
+      title="Modelo Bíblico"
+      text="El modelo bíblico de trabajo de IGLEPS es la persona de Jesucristo y, toma como base bíblica para quehacer eclesial y pastoral, el texto de San Lucas 10: 25-37."
+    />
+    <CardAbout
+      icon="fa-brands fa-telegram fa-2xl"
+      title="Modelo Bíblico"
+      text="El modelo bíblico de trabajo de IGLEPS es la persona de Jesucristo y, toma como base bíblica para quehacer eclesial y pastoral, el texto de San Lucas 10: 25-37."
+    />
+  </section>
+
+  <section
+    class="flex flex-col gap-8 lg:flex-row w-screen h-auto lg:h-auto bg-gray-100 p-10"
+  >
+    <div
+      class="h-[50vh] md:w-full lg:w-[50vw] md:h-[50vh] lg:h-auto bg-cover bg-center"
+      style="background-image:url(../../public/imgs/about-3.png);"
+      >
+    </div>
+    <article class="flex flex-col gap-8 lg:w-1/2 lg:p-24">
+      <span class="text-rose-600">Bienvenidos a IGLEPS</span>
+      <h2 class="text-2xl lg:text-4xl uppercase font-bold tracking-[.3em]">
+        Conoce un poco de nuestra Historia
+      </h2>
+      <p class="leading-8">
+        IGLEPS Inicia su obra como organización cristiana, el <span
+          class="font-bold text-rose-600">14 de abril de 1989</span
+        >, en la República de Honduras centroamérica, bajo la dirección del
+        reverendo Miguel Ángel Úbeda Quezada A quien Dios le hace sentir la
+        necesidadde establecer una organización cristianaque dé fe del evangelio
+        de jesucristoy acompañe los procesos de vida de las personas que
+        necesitanla gracia de Dios, de acuerdo a los principios y valores del
+        reino de Dios.
+      </p>
+      <a
+        class="w-32 text-white bg-rose-600 hover:bg-rose-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-rose-600 dark:hover:bg-rose-800"
+        >Leer Más</a
+      >
+    </article>
+  </section>
+</BaseLayout>
