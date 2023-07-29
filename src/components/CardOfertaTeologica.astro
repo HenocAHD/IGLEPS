@@ -10,11 +10,11 @@ const {title, duration, requirements, studyPlan} = Astro.props
 ---
 
 <article class="flex flex-col gap-4">
-    <h2 class="text-xl font-bold text-rose-600">{title}</h2>
+    <h2 class="lg:h-20 text-xl font-bold text-rose-600">{title}</h2>
     <section>
       <p><span class="font-bold">Duración:</span> {duration}</p>
     </section>
-    <section>
+    <section class="md:h-40 lg:h-auto">
       <h3 class="font-bold">Requisitos:</h3>
       <ul class="list-decimal pl-8 leading-8">
           {requirements.map((req) => <li>{req}</li>)}
@@ -24,7 +24,7 @@ const {title, duration, requirements, studyPlan} = Astro.props
     <h3 class="font-bold">Tabla de Asignaturas</h3>
     {studyPlan.map((plan) => {
       const subject = plan.subjects.map((subject) => <li class="">{subject}</li>)
-      return <p class="font-bold">{plan.year}</p> <ul class="list-decimal pl-8 leading-8">{subject}</ul>
+      return <p class="font-bold pt-8">{plan.year}</p> <ul class="list-decimal pl-8 leading-8">{subject}</ul>
     })}
     </section>
 </article>
