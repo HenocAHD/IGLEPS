@@ -2,12 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CardAbout from "../components/CardAbout.astro";
 import CardOfertaTeologica from "../components/CardOfertaTeologica.astro";
+import iglesia from '../assets/Iglesia.jpg'
 ---
 
 <BaseLayout title="IGLEPS">
   <section
     class="flex flex-col gap-8 items-center justify-center w-full h-screen bg-cover bg-center"
-    style="background: linear-gradient(to right, rgba(1, 6, 26, 0.8), rgba(1, 6, 26, 0.8)), url(public/iglesia.jpg); background-position: center;"
+    style=`background: linear-gradient(to right, rgba(1, 6, 26, 0.8), rgba(1, 6, 26, 0.8)), url(${iglesia}); background-position: center;`
   >
     <h1 class="flex flex-col items-center font-bold gap-8">
       <span
@@ -57,8 +58,8 @@ import CardOfertaTeologica from "../components/CardOfertaTeologica.astro";
     class="flex flex-col w-full gap-20 lg:flex-row justify-between h-auto p-8 lg:px-20 lg:py-0 bg-gray-100"
   >
     <div
-      class="h-[60vh] md:w-full lg:w-[50vw] md:h-[60vh] lg:h-auto bg-cover bg-center bg-blue-300 bg-blend-darken"
-      style="background-image: url(public/iglesia.jpg);"
+      class=`h-[60vh] md:w-full lg:w-[50vw] md:h-[60vh] lg:h-auto bg-cover bg-center bg-blue-300 bg-blend-darken"
+      style="background-image: url(${iglesia});`
     >
     </div>
     <article class="flex flex-col gap-8 lg:w-1/2 scroll-m-1 lg:py-20">
