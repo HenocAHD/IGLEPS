@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import CardAbout from "../components/CardAbout.astro";
 import CardOfertaTeologica from "../components/CardOfertaTeologica.astro";
 import iglesia from '../assets/Iglesia.jpg'
+import cruz from '../assets/cruz.svg'
 ---
 
 <BaseLayout title="IGLEPS">
@@ -107,7 +108,7 @@ import iglesia from '../assets/Iglesia.jpg'
 
   <!-- Oferta Académica -->
   <section class="w-full p-8 lg:pt-20">
-    <h2 class="text-2xl lg:text-4xl font-bold uppercase text-center py-6 pb-2 md:pb-2 md:py-8 lg:py-10 bg-[url('public/cruz.svg')] bg-no-repeat bg-center">
+    <h2 class=`text-2xl lg:text-4xl font-bold uppercase text-center py-6 pb-2 md:pb-2 md:py-8 lg:py-10 bg-[url(${cruz})] bg-no-repeat bg-center`>
       Conoce nuestras ofertas teológicas
     </h2>
   </section>
