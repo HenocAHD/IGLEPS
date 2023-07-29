@@ -1,0 +1,30 @@
+---
+interface Props {
+  title: string;
+  duration: string;
+  requirements: string[];
+  studyPlan: { year: string; subjects: string[] }[];
+}
+
+const {title, duration, requirements, studyPlan} = Astro.props
+---
+
+<article class="flex flex-col gap-4">
+    <h2 class="text-xl font-bold text-rose-600">{title}</h2>
+    <section>
+      <p><span class="font-bold">Duración:</span> {duration}</p>
+    </section>
+    <section>
+      <h3 class="font-bold">Requisitos:</h3>
+      <ul class="list-decimal pl-8 leading-8">
+          {requirements.map((req) => <li>{req}</li>)}
+      </ul>
+    </section>
+    <section>
+    <h3 class="font-bold">Tabla de Asignaturas</h3>
+    {studyPlan.map((plan) => {
+      const subject = plan.subjects.map((subject) => <li class="">{subject}</li>)
+      return <p class="font-bold">{plan.year}</p> <ul class="list-decimal pl-8 leading-8">{subject}</ul>
+    })}
+    </section>
+</article>

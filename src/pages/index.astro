@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CardAbout from "../components/CardAbout.astro";
+import CardOfertaTeologica from "../components/CardOfertaTeologica.astro";
 ---
 
 <BaseLayout title="IGLEPS">
   <section
-    class="flex flex-col gap-8 items-center justify-center w-full h-screen bg-gray-600 bg-blend-darken bg-cover bg-center"
-    style="background-image: url(https://i.postimg.cc/cJQ6F2pQ/bg-2.png);"
+    class="flex flex-col gap-8 items-center justify-center w-full h-screen bg-cover bg-center"
+    style="background: linear-gradient(to right, rgba(1, 6, 26, 0.8), rgba(1, 6, 26, 0.8)), url(../public/iglesia.jpg); background-position: center;"
   >
     <h1 class="flex flex-col items-center font-bold gap-8">
       <span
@@ -57,8 +58,8 @@ import CardAbout from "../components/CardAbout.astro";
   >
     <div
       class="h-[60vh] md:w-full lg:w-[50vw] md:h-[60vh] lg:h-auto bg-cover bg-center bg-blue-300 bg-blend-darken"
-      style="background-image:url(https://i.postimg.cc/Wb0t8Cgs/IMG-20230727-153206.jpg);"
-      >
+      style="background-image: url(../../public/iglesia.jpg);"
+    >
     </div>
     <article class="flex flex-col gap-8 lg:w-1/2 scroll-m-1 lg:py-20">
       <span class="text-rose-600">Bienvenidos a IGLEPS</span>
@@ -81,8 +82,14 @@ import CardAbout from "../components/CardAbout.astro";
       >
     </article>
   </section>
-  <section class="flex flex-col lg:flex-row items-center justify-between h-auto p-8 lg:p-20 bg-rose-600"> 
-    <h2 class="text-white text-xl lg:text-2xl font-bold text-center py-8 lg:p-0 uppercase">Compartir el evangelio con el mundo</h2>
+  <section
+    class="flex flex-col lg:flex-row items-center justify-between h-auto p-8 lg:p-20 bg-rose-600"
+  >
+    <h2
+      class="text-white text-xl lg:text-2xl font-bold text-center py-8 lg:p-0 uppercase"
+    >
+      Compartir el evangelio con el mundo
+    </h2>
     <article class="text-white text-center p-8 lg:p-0">
       <h3 class="text-3xl font-bold">1500</h3>
       <p>MIEMBROS</p>
@@ -98,7 +105,80 @@ import CardAbout from "../components/CardAbout.astro";
   </section>
 
   <!-- Oferta Académica -->
-  <section>
-
+  <section class="w-full p-8 lg:pt-20">
+    <h2 class="text-2xl lg:text-4xl font-bold uppercase text-center py-6 pb-2 md:pb-2 md:py-8 lg:py-10 bg-[url('../../public/cruz.svg')] bg-no-repeat bg-center">
+      Conoce nuestras ofertas teológicas
+    </h2>
+  </section>
+  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 justify-center flex-wrap w-full p-8 lg:p-20 bg-gray-100">
+    <CardOfertaTeologica
+      title="Diploma en Estudios de Educación Cristiana"
+      duration="1 año"
+      requirements={new Array(
+        "Saber leer y escribir.",
+        "Ser lider o miembro de la iglesia.",
+        "Ser Pastor o Pastora."
+      )}
+      studyPlan={new Array({
+        year: "",
+        subjects: new Array(
+          "Panorama de la biblia.",
+          "Bases de la educación cristiana.",
+          "El perfil de IGLEPS.",
+          "Aministración y liderazgo cristiano.",
+          "Mayordomía bíblica / Finanzas bíblicas.",
+          "Homilética básica",
+          "Apologética cristiana. (Sectas Falsas)",
+          "Hermeneutica bíblica. (Básica)",
+          "Teología práctica / Culto cristiano"
+        ),
+      })}
+    />
+    <CardOfertaTeologica
+      title="Diploma en Estudios de Educación Cristiana"
+      duration="1 año"
+      requirements={new Array(
+        "Saber leer y escribir.",
+        "Ser lider o miembro de la iglesia.",
+        "Ser Pastor o Pastora."
+      )}
+      studyPlan={new Array({
+        year: "",
+        subjects: new Array(
+          "Panorama de la biblia.",
+          "Bases de la educación cristiana.",
+          "El perfil de IGLEPS.",
+          "Aministración y liderazgo cristiano.",
+          "Mayordomía bíblica / Finanzas bíblicas.",
+          "Homilética básica",
+          "Apologética cristiana. (Sectas Falsas)",
+          "Hermeneutica bíblica. (Básica)",
+          "Teología práctica / Culto cristiano"
+        ),
+      })}
+    />
+    <CardOfertaTeologica
+      title="Diploma en Estudios de Educación Cristiana"
+      duration="1 año"
+      requirements={new Array(
+        "Saber leer y escribir.",
+        "Ser lider o miembro de la iglesia.",
+        "Ser Pastor o Pastora."
+      )}
+      studyPlan={new Array({
+        year: "",
+        subjects: new Array(
+          "Panorama de la biblia.",
+          "Bases de la educación cristiana.",
+          "El perfil de IGLEPS.",
+          "Aministración y liderazgo cristiano.",
+          "Mayordomía bíblica / Finanzas bíblicas.",
+          "Homilética básica",
+          "Apologética cristiana. (Sectas Falsas)",
+          "Hermeneutica bíblica. (Básica)",
+          "Teología práctica / Culto cristiano"
+        ),
+      })}
+    />
   </section>
 </BaseLayout>
