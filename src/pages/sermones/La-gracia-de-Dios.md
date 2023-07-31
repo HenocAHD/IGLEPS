@@ -1,4 +1,6 @@
 ---
+layout: ../../layouts/SermonLayout.astro
+
 title: "La Gracia de Dios"
 img: "https://preview.colorlib.com/theme/salvation/images/image_1.jpg.webp"
 author: "Henoc Hernadez"

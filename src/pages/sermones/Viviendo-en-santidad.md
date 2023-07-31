@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/SermonLayout.astro
 
 title: "Viviendo en Santidad"
 img: "https://preview.colorlib.com/theme/salvation/images/image_1.jpg.webp"

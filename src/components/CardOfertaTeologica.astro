@@ -1,30 +1,60 @@
 ---
 interface Props {
   title: string;
+  img: string;
+  direction: string;
   duration: string;
   requirements: string[];
   studyPlan: { year: string; subjects: string[] }[];
 }
 
-const {title, duration, requirements, studyPlan} = Astro.props
+const { title, img, direction, duration, requirements, studyPlan } =
+  Astro.props;
 ---
 
-<article class="flex flex-col gap-4">
-    <h2 class="lg:h-20 text-xl font-bold text-rose-600">{title}</h2>
-    <section>
-      <p><span class="font-bold">Duración:</span> {duration}</p>
-    </section>
-    <section class="md:h-40 lg:h-auto">
-      <h3 class="font-bold">Requisitos:</h3>
-      <ul class="list-decimal pl-8 leading-8">
+<section
+  class=`flex flex-col w-full gap-8 lg:gap-0 ${direction} h-auto bg-gray-100`
+>
+  <div
+    class="h-[60vh] w-full lg:w-1/2 lg:h-auto lg:min-h-[80vh] bg-cover bg-center"
+    style=`background-image: url(${img});`
+  >
+  </div>
+
+  <section class="flex flex-col gap-4 p-8 lg:p-20 lg:justify-center lg:items-center w-full lg:w-1/2 bg-gray-100">
+    <article class="">
+      <h2 class="pb-4 text-xl font-bold text-rose-600">
+        <span>{title}</span>
+      </h2>
+      <section>
+        <p><span class="font-bold pb-4">Duración:</span> {duration}</p>
+      </section>
+      <section>
+        <h3 class="font-bold pb-1">Requisitos:</h3>
+        <ul class="list-disc pl-8">
           {requirements.map((req) => <li>{req}</li>)}
-      </ul>
-    </section>
-    <section>
-    <h3 class="font-bold">Tabla de Asignaturas</h3>
-    {studyPlan.map((plan) => {
-      const subject = plan.subjects.map((subject) => <li class="">{subject}</li>)
-      return <p class="font-bold pt-8">{plan.year}</p> <ul class="list-decimal pl-8 leading-8">{subject}</ul>
-    })}
-    </section>
-</article>
+        </ul>
+      </section>
+      <section>
+        <h3 class="font-bold pt-1">Tabla de Asignaturas</h3>
+        <section class="">
+          {
+            studyPlan.map((plan) => {
+              const subject = plan.subjects.map((subject) => (
+                <li>{subject}</li>
+              ));
+              return (
+                <section>
+                  <p class="font-bold pt-1">{plan.year}</p>
+                  <ul class="grid md:grid-cols-2 md:gap-x-16 lg:grid-cols-2 list-disc pl-8">
+                    {subject}
+                  </ul>
+                </section>
+              );
+            })
+          }
+        </section>
+      </section>
+    </article>
+  </section>
+</section>

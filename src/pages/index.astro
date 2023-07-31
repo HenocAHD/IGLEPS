@@ -2,9 +2,20 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CardAbout from "../components/CardAbout.astro";
 import CardOfertaTeologica from "../components/CardOfertaTeologica.astro";
-import iglesia from '../assets/Iglesia.jpg'
-import cruz from '../assets/cruz.svg'
-import banner from '../assets/bg_2.png'
+import CardSermonMax from "../components/CardSermonMax.astro";
+import Subtitle from "../components/Subtitle.astro";
+
+import iglesia from "../assets/Iglesia.jpg";
+import banner from "../assets/bg_2.png";
+import bachilleratoTeologia from "../assets/bachillerato-teologia.jpg";
+import estudiosEducacionCristiana from "../assets/estudios-educacion-cristiana.jpg";
+import estudiosPreparacionPastoral from "../assets/estudios-preparacion-pastoral.jpg";
+import estudiosPastorales from "../assets/estudios-pastorales.jpg";
+
+const sermons = await Astro.glob("./sermones/*.md");
+const threeSermons = sermons
+  .sort((a, b) => b.frontmatter.date - a.frontmatter.date)
+  .slice(0, 3);
 ---
 
 <BaseLayout title="IGLEPS">
@@ -37,7 +48,8 @@ import banner from '../assets/bg_2.png'
 
   <!-- Sobre Nosotros -->
   <section
-    class="flex flex-col w-full gap-8 lg:flex-row lg:gap-16 h-auto p-8 lg:p-20"
+    class="flex flex-col w-full gap-8 lg:flex-row lg:gap-16 h-auto p-8 lg:py-20 lg:px-40"
+    id="sobre-nosotros"
   >
     <CardAbout
       icon="fa-solid fa-book-bible"
@@ -57,15 +69,14 @@ import banner from '../assets/bg_2.png'
   </section>
 
   <section
-    class="flex flex-col w-full gap-20 lg:flex-row justify-between h-auto p-8 lg:px-20 lg:py-0 bg-gray-100"
+    class="flex flex-col w-full gap-20 lg:flex-row justify-between h-auto p-8 lg:py-0 lg:px-40 bg-gray-100"
   >
     <div
       class=`h-[60vh] md:w-full lg:w-[50vw] md:h-[60vh] lg:h-auto bg-cover bg-center bg-blue-300 bg-blend-darken`
       style=`background-image: url(${iglesia});`
-
     >
     </div>
-    <article class="flex flex-col gap-8 lg:w-1/2 scroll-m-1 lg:py-20">
+    <article class="flex flex-col gap-8 lg:w-1/2 lg:py-20">
       <span class="text-rose-600">Bienvenidos a IGLEPS</span>
       <h2 class="text-2xl lg:text-4xl uppercase font-bold tracking-[.3em]">
         Conoce un poco de nuestra Historia
@@ -86,8 +97,9 @@ import banner from '../assets/bg_2.png'
       >
     </article>
   </section>
+
   <section
-    class="flex flex-col lg:flex-row items-center justify-between h-auto p-8 lg:p-20 bg-rose-600"
+    class="flex flex-col lg:flex-row items-center justify-between p-8 lg:mb-20 lg:py-20 lg:px-40 bg-rose-600"
   >
     <h2
       class="text-white text-xl lg:text-2xl font-bold text-center py-8 lg:p-0 uppercase"
@@ -109,63 +121,17 @@ import banner from '../assets/bg_2.png'
   </section>
 
   <!-- Oferta Académica -->
-  <section class="w-full p-8 lg:pt-20">
-    <h2 class=`text-2xl lg:text-4xl font-bold uppercase text-center py-6 pb-2 md:pb-2 md:py-8 lg:py-10 bg-[url(${cruz})] bg-no-repeat bg-center`>
-      Conoce nuestras ofertas teológicas
-    </h2>
-  </section>
-  <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 justify-center flex-wrap w-full p-8 lg:p-20 bg-gray-100">
-    <CardOfertaTeologica
-      title="Diploma en Estudios Pastorales"
-      duration="3 años"
-      requirements={new Array(
-        "Ser Pastor o Pastora.",
-        "Ser Lider aspirante al ministerio.",
-        "Tener la primaria como mínimo."
-      )}
-      studyPlan={new Array({
-        year: "1° año",
-        subjects: new Array(
-          "Introducción a la Biblia.",
-          "Homilética I.",
-          "Teología bíblica y sistemática I.",
-          "Hermenéutica I.",
-          "Español I.",
-          "Reglamento general",
-          "Eclesiología",
-          "Teología práctica / Culto cristiano"
-        ),
-      },
-      {
-        year: "2° año",
-        subjects: new Array(
-          "Historia del cristianismo.",
-          "Homilética II.",
-          "Teología bíblica y sistemática II.",
-          "Hermenéutica II.",
-          "Español II.",
-          "Ética pastoral",
-          "Evangelismo y discipulado.",
-          "Introducción al Antiguo Testamento."
-        ),
-      },
-      {
-        year: "2° año",
-        subjects: new Array(
-          "Introducción al Nuevo Testamento.",
-          "Introducción a la teología.",
-          "Introducción a la filosofía.",
-          "Teología bíblica y sistemática III.",
-          "Consejería pastoral.",
-          "Apologética cristiana.",
-          "Aministración pastoral y eclesial.",
-          "El Pastor, Forjador de Nuevos Pastores."
-        ),
-      }
-      )}
-    />
+  <Subtitle
+    id="oferta-teologica"
+    title="Oferta Académica"
+    subtitle="Inscríbete al instituto bíblico shalom"
+    data-id="oferta"
+  />
+  <section class="flex flex-col gap-8 lg:gap-0 p-8 lg:py-20 lg:px-40">
     <CardOfertaTeologica
       title="Diploma en Estudios de Educación Cristiana"
+      img={estudiosEducacionCristiana}
+      direction="lg:flex-row"
       duration="1 año"
       requirements={new Array(
         "Saber leer y escribir.",
@@ -189,6 +155,8 @@ import banner from '../assets/bg_2.png'
     />
     <CardOfertaTeologica
       title="Diploma en Estudios de Preparación Pastoral"
+      img={estudiosPreparacionPastoral}
+      direction="lg:flex-row-reverse"
       duration="1 año"
       requirements={new Array(
         "Ser Pastor o Pastora.",
@@ -210,5 +178,121 @@ import banner from '../assets/bg_2.png'
         ),
       })}
     />
+    <CardOfertaTeologica
+      title="Diploma en Estudios Pastorales"
+      img={estudiosPastorales}
+      direction="lg:flex-row"
+      duration="3 años"
+      requirements={new Array(
+        "Ser Pastor o Pastora.",
+        "Ser Lider aspirante al ministerio.",
+        "Tener la primaria como mínimo."
+      )}
+      studyPlan={new Array(
+        {
+          year: "1° año",
+          subjects: new Array(
+            "Introducción a la Biblia.",
+            "Homilética I.",
+            "Teología bíblica y sistemática I.",
+            "Hermenéutica I.",
+            "Español I.",
+            "Reglamento general.",
+            "Eclesiología.",
+            "Teología práctica / Culto cristiano."
+          ),
+        },
+        {
+          year: "2° año",
+          subjects: new Array(
+            "Historia del cristianismo.",
+            "Homilética II.",
+            "Teología bíblica y sistemática II.",
+            "Hermenéutica II.",
+            "Español II.",
+            "Ética pastoral",
+            "Evangelismo y discipulado.",
+            "Introducción al Antiguo Testamento."
+          ),
+        },
+        {
+          year: "3° año",
+          subjects: new Array(
+            "Introducción al Nuevo Testamento.",
+            "Introducción a la teología.",
+            "Introducción a la filosofía.",
+            "Teología bíblica y sistemática III.",
+            "Consejería pastoral.",
+            "Apologética cristiana.",
+            "Aministración pastoral y eclesial.",
+            "El Pastor, Forjador de Nuevos Pastores."
+          ),
+        }
+      )}
+    />
+    <CardOfertaTeologica
+      title="Bachillerato en Teología"
+      img={bachilleratoTeologia}
+      direction="lg:flex-row-reverse"
+      duration="3 años"
+      requirements={new Array(
+        "Ser graduado de D. Estudios Pastorales.",
+        "Tener como mínimo la primaria aprobada."
+      )}
+      studyPlan={new Array(
+        {
+          year: "1° año",
+          subjects: new Array(
+            "Pentecostalismo.",
+            "Introducción al Hebreo Bíblico I.",
+            "Introducción al Griego Bíblico I.",
+            "Ensayo Teológico."
+          ),
+        },
+        {
+          year: "2° año",
+          subjects: new Array(
+            "Principios básicos de administración.",
+            "Homilética III.",
+            "Introducción a la exégesis del Antiguo Testamento.",
+            "Teologías emergentes."
+          ),
+        },
+        {
+          year: "3° año",
+          subjects: new Array(
+            "Introducción a la exégesis del Nuevo Testamento.",
+            "Liturgia.",
+            "Literatura sapiencial y apocalítica.",
+            "Hermenéutica especial.",
+            "Seminario Monográfico - Monografía/Defensa"
+          ),
+        }
+      )}
+    />
+  </section>
+
+  <!-- Sermones -->
+  <Subtitle
+    id="sermones"
+    title="Sermones"
+    subtitle="Edifica tu vida leyendo nuestros sermones"
+  />
+  <section
+    class="flex flex-col lg:flex-row gap-8 justify-around p-8 lg:py-20 lg:px-40"
+  >
+    {
+      threeSermons.map((sermon) => {
+        return (
+          <CardSermonMax
+            img={sermon.frontmatter.img}
+            title={sermon.frontmatter.title}
+            description={sermon.frontmatter.description}
+            date={sermon.frontmatter.date}
+            url={sermon.url}
+          />
+        );
+      })
+    }
   </section>
 </BaseLayout>

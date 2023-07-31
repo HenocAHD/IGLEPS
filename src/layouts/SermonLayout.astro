@@ -1,14 +1,19 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout title={frontmatter.title}>
-    <p>Publicado el: {frontmatter.date}</p>
-    <p>Escrito por {frontmatter.author}</p>
-    <img src={frontmatter.image.url} width=300 alt={frontmatter.image.alt}>
+  <article class="py-32 p-8 lg:py-32 lg:max-w-screen-md mx-auto leading-8">
+    <h1 class="text-4xl py-8 font-bold">
+      {frontmatter.title}
+      <span class="block font-normal text-xs text-gray-500">por {frontmatter.author}</span>
+    </h1>
 
     <slot />
 
+    <p class="text-xs pt-8 text-gray-700">Publicado el {frontmatter.date}</p>
+  </article>
 </BaseLayout>
+
+<style></style>

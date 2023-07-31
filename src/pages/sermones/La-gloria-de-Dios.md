@@ -1,9 +1,10 @@
 ---
+layout: ../../layouts/SermonLayout.astro
 
 title: "La Gloria de Dios"
 img: "https://preview.colorlib.com/theme/salvation/images/image_1.jpg.webp"
 author: "Henoc Hernadez"
-description: "Contemplemos la gloria de Dios"
+description: "Contemplemos la gloria de Dios y las maravillas que nos ha dado."
 date: "2018-09-30"
 
 ---
