@@ -1,99 +1,96 @@
----
----
-
 <nav
-  class="flex lg:flex-row flex-wrap justify-between items-center bg-white dark:bg-gray-900 fixed w-full top-0 left-0 border-b border-gray-200 dark:border-gray-600"
+  class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600"
 >
-  <div
-    class="h-auto p-4 lg:px-20"
-  >
-    <span
-      class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-      >IGLEPS</span
-    >
-  </div>
-  <div class="flex p-4 lg:px-20 lg:order-2">
-    <button
-      type="button"
-      class="text-white bg-rose-600 hover:bg-rose-800 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0 dark:bg-rose-600 dark:hover:bg-rose-800"
-      >Donar Ahora</button
-    >
-    <button
-      id="hamburger"
-      type="button"
-      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
-    >
-      <svg
-        class="w-5 h-5"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 17 14"
+  <div class="flex flex-wrap items-center justify-between py-4 px-8 lg:px-40">
+    <a href="/" class="flex items-center">
+      <span
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+        >IGLEPS</span
       >
-        <path
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M1 1h15M1 7h15M1 13h15"></path>
-      </svg>
-    </button>
-  </div>
-  <div
-    class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1 hidden"
-    id="navbar-sticky"
-  >
-    <ul
-      class="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700"
+    </a>
+    <div class="flex lg:order-2">
+      <button
+        type="button"
+        class="text-white bg-rose-600 hover:bg-rose-700 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0 dark:bg-rose-600 dark:hover:bg-rose-700"
+        >Donar</button
+      >
+      <button
+        data-collapse-toggle="navbar-sticky"
+        type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none dark:text-gray-400 dark:hover:bg-gray-700"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+        id="hamburguer"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
+      id="navbar-sticky"
     >
-      <li>
-        <a
-          href="/"
-          class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-          aria-current="page">Inicio</a
-        >
-      </li>
-      <li>
-        <a
-          href="/about/"
-          class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-          >Sobre Nosotros</a
-        >
-      </li>
-      <li>
-        <a
-          href="#oferta-teologica"
-          class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-          >Oferta Teolólica</a
-        >
-      </li>
-      <li>
-        <a
-          href="/sermons/"
-          class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-          >Sermones</a
-        >
-      </li>
-      <li>
-        <a
-          href="/contact/"
-          class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
-          >Contáctanos</a
-        >
-      </li>
-    </ul>
+      <ul
+        class="flex flex-col p-4 lg:p-0 mt-4 text-sm font-medium border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700"
+      >
+        <li>
+          <a
+            href="/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            aria-current="page">Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="about"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >Nosotros</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >Oferta Teológica</a
+          >
+        </li>
+        <li>
+          <a
+            href="sermons"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >Sermones</a
+          >
+        </li>
+        <li>
+          <a
+            href="contact"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            >Contáctanos</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
 <script>
-  const $hamburger = document.querySelector("#hamburger");
+  const $hamburguer = document.querySelector("#hamburguer");
   const $navbar = document.querySelector("#navbar-sticky");
 
-  const expnadir = () => {
-    if ($hamburger !== null && $navbar !== null) {
-      $navbar.classList.toggle("hidden");
-    }
-  };
-
-  if ($hamburger !== null) $hamburger.addEventListener("click", expnadir);
+  $hamburguer.addEventListener("click", () => {
+    $navbar.classList.toggle("hidden");
+  });
 </script>

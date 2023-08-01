@@ -1,7 +1,9 @@
 ---
 import CardSermonMin from "./CardSermonMin.astro";
 const post = await Astro.glob("../pages/sermones/*.md");
-const postSort = post.sort((a, b) => b.frontmatter.date - a.frontmatter.date).slice(0,2);
+const postSort = post
+  .sort((a, b) => b.frontmatter.date - a.frontmatter.date)
+  .slice(0, 2);
 ---
 
 <footer class="w-full h-auto pb-4 bg-gray-900">
@@ -10,7 +12,7 @@ const postSort = post.sort((a, b) => b.frontmatter.date - a.frontmatter.date).sl
   >
     <section class="flex flex-col gap-8 w-full lg:w-80">
       <h2 class="text-xl font-bold text-rose-600">IGLEPS</h2>
-      <p class="text-white leading-8">
+      <p class="text-gray-400 leading-8">
         La Iglesia Evangélica Pentecostés "El Buen Samaritano" es una
         organización cristiana,compuestapor personas regeneradas por la gracia
         de jesucristo,sujetas y dóciles a la dirección del espíritu santo,la
@@ -20,25 +22,25 @@ const postSort = post.sort((a, b) => b.frontmatter.date - a.frontmatter.date).sl
       <div class="flex flex-row gap-4">
         <a
           href="#"
-          class="w-12 h-12 text-white hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
+          class="w-12 h-12 text-gray-400 hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
         >
           <i class="fa-brands fa-facebook-f fa-xl"></i>
         </a>
         <a
           href="#"
-          class="w-12 h-12 text-white hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
+          class="w-12 h-12 text-gray-400 hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
         >
           <i class="fa-brands fa-instagram fa-xl"></i>
         </a>
         <a
           href="#"
-          class="w-12 h-12 text-white hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
+          class="w-12 h-12 text-gray-400 hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
         >
           <i class="fa-brands fa-twitter fa-xl"></i>
         </a>
         <a
           href="#"
-          class="w-12 h-12 text-white hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
+          class="w-12 h-12 text-gray-400 hover:text-rose-600 bg-gray-700 text-center rounded-full flex items-center justify-center"
         >
           <i class="fa-brands fa-youtube fa-xl"></i>
         </a>
@@ -62,32 +64,41 @@ const postSort = post.sort((a, b) => b.frontmatter.date - a.frontmatter.date).sl
       <h2 class="text-xl font-bold text-rose-600">Enlaces</h2>
       <ul>
         <li class="pb-4 lg:pr-8 border-b border-gray-600">
-          <a href="" class="text-white">Inicio</a>
+          <a href="" class="text-gray-400">Inicio</a>
         </li>
         <li class="py-4 lg:pr-8 border-b border-gray-600">
-          <a href="" class="text-white">Ministerio</a>
+          <a href="" class="text-gray-400">Nosotros</a>
         </li>
         <li class="py-4 lg:pr-8 border-b border-gray-600">
-          <a href="" class="text-white">Sermones</a>
+          <a href="" class="text-gray-400">Oferta Teológica</a>
         </li>
         <li class="py-4 lg:pr-8 border-b border-gray-600">
-          <a href="" class="text-white">Contáctanos</a>
+          <a href="" class="text-gray-400">Sermones</a>
+        </li>
+        <li class="py-4 lg:pr-8 border-b border-gray-600">
+          <a href="" class="text-gray-400">Contáctanos</a>
         </li>
       </ul>
     </section>
     <section class="flex flex-col gap-8">
       <h2 class="text-xl font-bold text-rose-600">¿Tienes preguntas?</h2>
-      <article class="text-white">
+      <article class="text-gray-400">
         <i class="fa-solid fa-phone"></i>
-        <p class="flex flex-col"><span>Honduras: +504 8925-7992</span><span>Nicaragua: +505 8833-1701</span><span>Costa Rica: +506 7005-0881</span></p>
+        <p class="flex flex-col">
+          <span>Honduras: +504 8925-7992</span><span
+            >Nicaragua: +505 8833-1701</span
+          ><span>Costa Rica: +506 7005-0881</span>
+        </p>
       </article>
-      <article class="text-white">
+      <article class="text-gray-400">
         <i class="fa-solid fa-envelope"></i>
         <p>igleps@gmail.com</p>
       </article>
     </section>
   </section>
   <p class="text-center text-gray-600 text-xs">
-    Derechos Reservados 2023 - Desarrollado por <span class="text-rose-600">Henoc Hernández ❤</span>
+    Derechos Reservados 2023 - Desarrollado por <span class="text-rose-600"
+      >Henoc Hernández ❤</span
+    >
   </p>
 </footer>
