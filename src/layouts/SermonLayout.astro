@@ -2,10 +2,12 @@
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
+<style>
+</style>
 
 <BaseLayout title={frontmatter.title}>
-  <article class="py-32 p-8 lg:py-32 lg:max-w-screen-md mx-auto leading-8">
-    <h1 class="text-4xl py-8 font-bold">
+  <article class="prose py-32 p-8 lg:py-32 lg:max-w-screen-md mx-auto leading-8">
+    <h1 class="text-4xl pt-8 font-bold">
       {frontmatter.title}
       <span class="block font-normal text-xs text-gray-500">por {frontmatter.author}</span>
     </h1>

@@ -19,8 +19,8 @@ Si alguna vez te sientes perdido o solo, recuerda que la gracia de Dios siempre 
 
 Aquí hay algunas citas de la Biblia sobre la gracia de Dios:
 
-- "Porque la paga del pecado es muerte, pero la dádiva de Dios es vida eterna en Cristo Jesús nuestro Señor" (Romanos 6:23).
-- "Pero ahora, aparte de la ley, se ha manifestado la justicia de Dios, atestiguada por la ley y los profetas; la justicia de Dios por medio de la fe en Jesucristo, para todos los que creen. Porque no hay distinción, porque todos pecaron y están privados de la gloria de Dios, y son justificados gratuitamente por su gracia, mediante la redención que es en Cristo Jesús" (Romanos 3:21-24).
-- "Pero Dios muestra su amor para con nosotros, en que siendo aún pecadores, Cristo murió por nosotros" (Romanos 5:8).
-- "Porque por gracia sois salvos por medio de la fe; y esto no es de vosotros, es don de Dios; no por obras, para que nadie se gloríe" (Efesios 2:8-9).
+* "Porque la paga del pecado es muerte, pero la dádiva de Dios es vida eterna en Cristo Jesús nuestro Señor" (Romanos 6:23).
+* "Pero ahora, aparte de la ley, se ha manifestado la justicia de Dios, atestiguada por la ley y los profetas; la justicia de Dios por medio de la fe en Jesucristo, para todos los que creen. Porque no hay distinción, porque todos pecaron y están privados de la gloria de Dios, y son justificados gratuitamente por su gracia, mediante la redención que es en Cristo Jesús" (Romanos 3:21-24).
+* "Pero Dios muestra su amor para con nosotros, en que siendo aún pecadores, Cristo murió por nosotros" (Romanos 5:8).
+* "Porque por gracia sois salvos por medio de la fe; y esto no es de vosotros, es don de Dios; no por obras, para que nadie se gloríe" (Efesios 2:8-9).
 La gracia de Dios es un regalo maravilloso que no debemos dar por sentado. Es algo que debemos apreciar y agradecer todos los días.

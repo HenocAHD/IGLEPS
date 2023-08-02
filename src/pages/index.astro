@@ -1,12 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import CardAbout from "../components/CardAbout.astro";
+
 import CardOfertaTeologica from "../components/CardOfertaTeologica.astro";
 import CardSermonMax from "../components/CardSermonMax.astro";
 import Subtitle from "../components/Subtitle.astro";
+import About from "../components/About.astro";
 
-import iglesia from "../assets/Iglesia.jpg";
-import banner from "../assets/bg_2.png";
+import banner from "../assets/bg_2.jpg";
 import bachilleratoTeologia from "../assets/bachillerato-teologia.jpg";
 import estudiosEducacionCristiana from "../assets/estudios-educacion-cristiana.jpg";
 import estudiosPreparacionPastoral from "../assets/estudios-preparacion-pastoral.jpg";
@@ -47,67 +47,7 @@ const threeSermons = sermons
   </section>
 
   <!-- Sobre Nosotros -->
-  <section
-    class="flex flex-col w-full gap-8 lg:flex-row lg:gap-16 h-auto p-8 lg:py-20 lg:px-40"
-    id="sobre-nosotros"
-  >
-    <CardAbout
-      icon="fa-solid fa-book-bible"
-      title="Modelo Bíblico de Trabajo"
-      text="El modelo bíblico de trabajo de IGLEPS es la persona de Jesucristo y, toma como base bíblica para su quehacer eclesial y pastoral, el texto de San Lucas 10: 25-37."
-    />
-    <CardAbout
-      icon="fa-solid fa-bullseye"
-      title="Misión"
-      text="Ensanchar el reino de Dios en la Tierra, por medio de la predicación y enseñanza de la palabra de Dios para la edificación de los creyentes y buena noticia de salvación para todas y todos. Acompañar a través del discipulado cristiano y consejería pastoral, procesos de restauración espiritual para las familias e individuos, con el fin de que se conviertan en hombres y mujeres de bien y propositivos en sus respectivos hogares, iglesias y comunidades. Formar su liderazgo en ciencias bíblicas y teológicas, para que este, sea íntegro, y apto en el desarrollo de sus funciones pastorales y eclesiales."
-    />
-    <CardAbout
-      icon="fa-solid fa-paper-plane"
-      title="Visión"
-      text="Crecer cualitativa y cuantitativamente y fortalecer en todos los aspectos, con un liderazgo propositivo y bien capacitado en biblia, teología y pastoral, así como en otras ciencias humanísticas que se interesan por el ser humano y su contexto de vida. Ser reconocida a nivel nacional e internacional por su manera de ser y de hacer su trabajo pastoral y eclesial a favor del ser humano y de su entorno."
-    />
-  </section>
-
-  <section
-    class="flex flex-col w-full gap-20 lg:flex-row justify-between h-auto p-8 lg:py-0 lg:px-40 bg-gray-100"
-  >
-    <div
-      class=`h-[60vh] md:w-full lg:w-[50vw] md:h-[60vh] lg:h-auto bg-cover bg-center bg-blue-300 bg-blend-darken`
-      style=`background-image: url(${iglesia});`
-    >
-    </div>
-    <article class="flex flex-col gap-8 lg:w-1/2 lg:py-20">
-      <h2 class="text-2xl lg:text-4xl uppercase font-bold tracking-[.3em]">
-        CONOCE UN POCO DE NUESTRO ORIGEN COMO ORGANIZACIÓN CRISTIANA.
-      </h2>
-      <p class="leading-8 text-justify">
-        IGLEPS Inicia su obra como organización cristiana, el <span
-          class="font-bold text-rose-600">14 de abril de 1989</span
-        >, en la República de Honduras centroamérica, bajo la dirección del
-        reverendo Miguel Ángel Úbeda Quezada a quien Dios le hace sentir la
-        necesidad de establecer una organización cristiana que dé fe del
-        evangelio de jesucristo y acompañe los procesos de vida de las personas
-        que necesitan la gracia de Dios, de acuerdo a los principios y valores
-        del reino de Dios.
-      </p>
-      <a
-        class="w-32 text-white bg-rose-600 hover:bg-rose-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-rose-600 dark:hover:bg-rose-800"
-        >Leer Más</a
-      >
-    </article>
-  </section>
-
-  <section
-    class="flex flex-col gap-8 items-center justify-between p-8 lg:mb-20 lg:py-20 lg:px-40 bg-rose-600"
-  >
-    <h2
-      class="text-white text-xl lg:text-2xl font-bold text-center py-8 lg:p-0 uppercase"
-    >
-      Nos motiva compartir el EVANGELIO DE LA GRACIA DE JESUCRISTO con el mundo
-      y CONTRIBUIR con la edificación de la iglesia del Señor.
-    </h2>
-    <span class="w-full text-right text-gray-200">“Aquí usted se sentirá amado y ayudado”</span>
-  </section>
+  <About/>
 
   <!-- Oferta Académica -->
   <Subtitle
