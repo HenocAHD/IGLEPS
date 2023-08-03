@@ -11,7 +11,7 @@
     <div class="flex lg:order-2">
       <button
         type="button"
-        class="text-white bg-rose-600 hover:bg-rose-700 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0 dark:bg-rose-600 dark:hover:bg-rose-700"
+        class="text-white bg-rose-600 hover:bg-rose-700 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 lg:mr-0 dark:bg-rose-600 dark:hover:bg-rose-700 duration-300"
         >Donar</button
       >
       <button
@@ -49,36 +49,36 @@
         <li>
           <a
             href="/"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 duration-300"
             aria-current="page">Inicio</a
           >
         </li>
         <li>
           <a
             id="about-ancle"
-            href="#"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            href="/about/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 duration-300"
             >Nosotros</a
           >
         </li>
         <li>
           <a
-            href="#oferta-teologica"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            href="/theologicalOffer/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 duration-300"
             >Oferta Teológica</a
           >
         </li>
         <li>
           <a
-            href="sermons"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            href="/sermons/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 duration-300"
             >Sermones</a
           >
         </li>
         <li>
           <a
-            href="contact"
-            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"
+            href="/contact/"
+            class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-rose-600 lg:p-0 lg:dark:hover:text-rose-600 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700 duration-300"
             >Contáctanos</a
           >
         </li>
@@ -94,13 +94,4 @@
   $hamburguer.addEventListener("click", () => {
     $navbar.classList.toggle("hidden");
   });
-
-  // const $about = document.getElementById('about-section').getBoundingClientRect()
-
-  // document.getElementById('about-ancle').addEventListener('click', () => {
-  //   scrollTo({
-  //     top: $about.top - 52,
-  //     behavior:'smooth'
-  //   })
-  // })
 </script>

@@ -1,15 +1,17 @@
 ---
 interface Props {
-  icon: string;
   title: string;
   text: string
 }
 
-const { icon, title, text } = Astro.props;
+const { title, text } = Astro.props;
 ---
 
-<section class="flex flex-col gap-4 w-full h-auto">
-  <i class:list={[icon, 'text-center', 'text-rose-600', 'text-5xl']}></i>
+<section class="flex flex-col items-center gap-4 w-full h-auto">
+  <section class="flex flex-row items-center h-auto justify-center w-full gap-4">
+    <i class="gg-bookmark"></i>
+    <i class="gg-math-minus w-full "></i>
+  </section>
   <h2 class="font-bold text-2xl pt-2 text-center">{title}</h2>
   <p class="text-justify leading-8">{text}</p>
 </section>

@@ -1,0 +1,160 @@
+---
+import CardOfertaTeologica from "./CardOfertaTeologica.astro";
+import Subtitle from "./Subtitle.astro";
+import bachilleratoTeologia from "../assets/bachillerato-teologia.jpg";
+import estudiosEducacionCristiana from "../assets/estudios-educacion-cristiana.jpg";
+import estudiosPreparacionPastoral from "../assets/estudios-preparacion-pastoral.jpg";
+import estudiosPastorales from "../assets/estudios-pastorales.jpg";
+
+---
+
+<Subtitle
+    id="oferta-teologica"
+    title="Oferta Teológica 2023-2026"
+    subtitle="¡Inscríbete en el instituto bíblico shalom!"
+    data-id="oferta"
+  />
+  <section class="flex flex-col gap-8 lg:gap-0 p-8 lg:py-20 lg:px-40">
+    <CardOfertaTeologica
+      title="Diploma en Estudios de Educación Cristiana"
+      img={estudiosEducacionCristiana}
+      direction="lg:flex-row"
+      duration="1 año"
+      requirements={new Array(
+        "Saber leer y escribir.",
+        "Ser lider o miembro de la iglesia.",
+        "Ser Pastor o Pastora."
+      )}
+      studyPlan={new Array({
+        year: "",
+        subjects: new Array(
+          "Panorama de la biblia.",
+          "Bases de la educación cristiana.",
+          "El perfil de IGLEPS.",
+          "Aministración y liderazgo cristiano.",
+          "Mayordomía bíblica / Finanzas bíblicas.",
+          "Homilética básica.",
+          "Apologética cristiana. (Sectas Falsas)",
+          "Hermeneutica bíblica. (Básica)",
+          "Teología práctica / Culto cristiano"
+        ),
+      })}
+    />
+    <CardOfertaTeologica
+      title="Diploma en Estudios de Preparatoria Pastoral"
+      img={estudiosPreparacionPastoral}
+      direction="lg:flex-row-reverse"
+      duration="1 año"
+      requirements={new Array(
+        "Ser Pastor o Pastora.",
+        "Ser Lider aspirante al ministerio.",
+        "Tener la primaria o saber leer y escribir."
+      )}
+      studyPlan={new Array({
+        year: "",
+        subjects: new Array(
+          "Homilética I.",
+          "Inttroducción a la Biblia.",
+          "Ética pastoral.",
+          "Eclesiología.",
+          "Reglamento general.",
+          "Español I",
+          "Administración pastoral y eclesial.",
+          "Hermenéutica I",
+          "Teoligía práctica / Culto cristiano"
+        ),
+      })}
+    />
+    <CardOfertaTeologica
+      title="Diploma en Estudios Pastorales"
+      img={estudiosPastorales}
+      direction="lg:flex-row"
+      duration="3 años"
+      requirements={new Array(
+        "Ser Pastor o Pastora.",
+        "Ser Lider aspirante al ministerio.",
+        "Tener la primaria como mínimo."
+      )}
+      studyPlan={new Array(
+        {
+          year: "1° año",
+          subjects: new Array(
+            "Introducción a la Biblia.",
+            "Homilética I.",
+            "Teología bíblica y sistemática I.",
+            "Hermenéutica I.",
+            "Español I.",
+            "Reglamento general.",
+            "Eclesiología.",
+            "Teología práctica / Culto cristiano."
+          ),
+        },
+        {
+          year: "2° año",
+          subjects: new Array(
+            "Historia del cristianismo.",
+            "Homilética II.",
+            "Teología bíblica y sistemática II.",
+            "Hermenéutica II.",
+            "Español II.",
+            "Ética pastoral",
+            "Evangelismo y discipulado.",
+            "Introducción al Antiguo Testamento."
+          ),
+        },
+        {
+          year: "3° año",
+          subjects: new Array(
+            "Introducción al Nuevo Testamento.",
+            "Introducción a la teología.",
+            "Introducción a la filosofía.",
+            "Teología bíblica y sistemática III.",
+            "Consejería pastoral.",
+            "Apologética cristiana.",
+            "Aministración pastoral y eclesial.",
+            "El Pastor, Forjador de Nuevos Pastores."
+          ),
+        }
+      )}
+    />
+    <CardOfertaTeologica
+      title="Bachillerato en Teología"
+      img={bachilleratoTeologia}
+      direction="lg:flex-row-reverse"
+      duration="3 años"
+      requirements={new Array(
+        "Ser graduado de D. Estudios Pastorales.",
+        "Ser graduado en bachiller."
+      )}
+      studyPlan={new Array(
+        {
+          year: "1° año",
+          subjects: new Array(
+            "Pentecostalismo.",
+            "Introducción al Hebreo Bíblico I.",
+            "Introducción al Griego Bíblico I.",
+            "Ensayo Teológico."
+          ),
+        },
+        {
+          year: "2° año",
+          subjects: new Array(
+            "Principios básicos de administración.",
+            "Homilética III.",
+            "Introducción a la exégesis del Antiguo Testamento.",
+            "Teologías emergentes."
+          ),
+        },
+        {
+          year: "3° año",
+          subjects: new Array(
+            "Introducción a la exégesis del Nuevo Testamento.",
+            "Liturgia.",
+            "Literatura sapiencial y apocalítica.",
+            "Hermenéutica especial.",
+            "Seminario Monográfico - Monografía/Defensa"
+          ),
+        }
+      )}
+    />
+  </section>

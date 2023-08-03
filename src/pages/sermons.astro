@@ -1,7 +1,37 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import CardSermonMax from "../components/CardSermonMax.astro";
+import Subtitle from "../components/Subtitle.astro";
+import SubSectionLayout from "../layouts/SubSectionLayout.astro";
+import SermonCarrusel from "../components/SermonCarrusel.astro";
+import SermonLayout from "../layouts/SermonLayout.astro";
+
+const sermons = await Astro.glob("./sermones/*.md");
+const threeSermons = sermons.sort(
+  (a, b) => b.frontmatter.title - a.frontmatter.title
+);
 ---
 
-<BaseLayout title="Sermones">
-
-</BaseLayout>
+<SubSectionLayout title="Sermones" data-sermones={sermons}>
+  <Subtitle
+    id="sermones"
+    title="Sermones"
+    subtitle="Edifica tu vida leyendo nuestros sermones"
+  />
+  <section
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:flex-row gap-8 justify-around p-8 lg:py-20 lg:px-40"
+  >
+    {
+      threeSermons.map((sermon) => {
+        return (
+          <CardSermonMax
+            img={sermon.frontmatter.img}
+            title={sermon.frontmatter.title}
+            description={sermon.frontmatter.description}
+            date={sermon.frontmatter.date}
+            url={sermon.url}
+          />
+        );
+      })
+    }
+  </section>
+</SubSectionLayout>
