@@ -1,7 +1,49 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import SubSectionLayout from "../layouts/SubSectionLayout.astro";
+import iglesia from "../assets/Iglesia.jpg";
 ---
 
-<BaseLayout title="Contáctanos">
-
-</BaseLayout>
+<SubSectionLayout title="Contáctanos">
+  <section class="flex flex-col md:flex-row justify-center pt-20 lg:pt-40 gap-8 lg:gap-40">
+    <section class="flex flex-col items-center gap-8">
+        <div class="w-20 h-20 rounded-full bg-rose-600 flex justify-center items-center">
+            <i class="gg-phone text-white"></i>
+        </div>
+      <p class="flex flex-col">
+        <span>Honduras: +504 8925-7992</span><span
+          >Nicaragua: +505 8833-1701</span
+        ><span>Costa Rica: +506 7005-0881</span>
+      </p>
+    </section>
+    <section class="flex flex-col items-center gap-8">
+      <div class="w-20 h-20 rounded-full bg-rose-600 flex justify-center items-center">
+          <i class="gg-mail text-white"></i>
+      </div>
+      <p>igleps@gmail.com</p>
+    </section>
+  </section>
+  <section class="flex flex-col lg:flex-row w-full h-screen px-8 py-20 lg:px-40 lg:pb-40">
+    <form action="https://formsubmit.co/soporte.igleps@gmail.com" method="POST" class="flex flex-col items-start w-full gap-4 bg-rose-600 p-8">
+      <label for="email" class="text-white">Correo</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="rounded-sm h-10 p-4 w-full"
+        placeholder="Correo"
+        required
+      />
+      <label for="message" class="text-white">Mensaje</label>
+      <textarea name="name" cols="40" rows="5" id="message" class="rounded-sm p-4 w-full" placeholder="Mensaje" required
+      ></textarea>
+      <button
+        type="submit"
+        class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-900 duration-300"
+        >Enviar</button
+      >
+    </form>
+    <figure class="h-full">
+      <img src={iglesia} alt="Iglesia" class="h-full w-full object-cover" />
+    </figure>
+  </section>
+</SubSectionLayout>
